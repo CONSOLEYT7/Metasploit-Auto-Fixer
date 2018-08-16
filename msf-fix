@@ -1,0 +1,6 @@
+mkdir -p $PREFIX/var/lib/postgresql &>/dev/null
+echo [*] Making Directory $PREFIX/var/lib/postgresql
+initdb $PREFIX/var/lib/postgresql &>/dev/null
+echo [*] Prefixing...
+pg_ctl -D $PREFIX/var/lib/postgresql start &>/dev/null
+echo [*] Server Started.
